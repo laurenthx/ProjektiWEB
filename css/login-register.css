@@ -1,0 +1,139 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family:  sans-serif;
+}
+
+.login-register{
+    width: 100%;
+    height: 700px;
+    background: rgb(149, 149, 243);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 90vh;
+	
+}
+a {
+	color:rgb(73, 111, 236);
+	transition: all .3s ease;
+	text-decoration: none;
+}
+
+a:hover {
+	color:darkcyan;
+}
+
+.container {
+	max-width: 500px;
+	width: 100%;
+	position: relative;
+}
+form {
+	width: 100%;
+	padding: 28px;
+	border-radius: 12px;
+	background: #fff;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%) scale(.8);
+	opacity: 0;
+	z-index: 100;
+	transition: all .3s ease;
+	transition-delay: 0s;
+}
+form.active {
+	transform: translateY(-50%);
+	opacity: 1;
+	z-index: 200;
+	transition-delay: .3s;
+}
+.title {
+	font-size: 24px;
+	font-weight: 600;
+	margin-bottom: 20px;
+}
+.form-group {
+	margin-bottom: 14px;
+}
+.form-group label {
+	display: inline-block;
+	margin-bottom: 4px;
+}
+.input-group {
+	width: 100%;
+	position: relative;
+}
+.input-group input {
+	padding: 12px 40px 12px 20px;
+	outline: none;
+	border-radius: 6px;
+	border: 1px solid rgb(216, 214, 214);
+	width: 88%;
+	transition: all .3s ease;
+}
+
+/* Validation */
+.input-group input:focus,
+.input-group input:not(:placeholder-shown) {
+	border-color: rgb(73, 111, 236);
+	background-color: rgb(215, 224, 243);
+}
+.input-group input:focus + i,
+.input-group input:not(:placeholder-shown) + i {
+	color: rgb(73, 111, 236);
+}
+.input-group input:focus:valid {
+	box-shadow: 0 0 0 4px rgb(138, 245, 138);
+}
+.input-group input:valid:not(:placeholder-shown) {
+	border-color: rgb(51, 207, 51);
+}
+.input-group input:valid:not(:placeholder-shown) + i {
+	color:greenyellow;
+}
+.input-group input:invalid:not(:placeholder-shown) {
+	border-color: red;
+}
+.input-group input:invalid:not(:placeholder-shown) + i {
+	color: red;
+}
+.input-group input:focus:invalid {
+	box-shadow: 0 0 0 4px rgb(231, 159, 159);
+}
+.input-group input:focus,
+.input-group input:focus:placeholder-shown {
+	box-shadow: 0 0 0 4px #AECFFF;
+}
+/* Validation */
+
+.input-group i {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	right: 20px;
+	color:#9B9B9B;
+	pointer-events: none;
+	transition: all .3s ease;
+}
+.form-group .help-text {
+	font-size: 12px;
+	color:#9B9B9B;
+}
+.btn-submit {
+	padding: 12px 0;
+	display: block;
+	width: 100%;
+	color: #fff;
+	border-radius: 6px;
+	cursor: pointer;
+	transition: all .3s ease;
+	border: none;
+	font-weight: 500;
+	background:rgb(73, 111, 236);
+	margin-bottom: 20px;
+}
+.btn-submit:hover {
+	background:rgb(81, 81, 150);
+}
